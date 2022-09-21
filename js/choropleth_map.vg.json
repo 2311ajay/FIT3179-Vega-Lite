@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Fatal shootings in the USA",
+  "width": 800,
+  "height": 400,
+  "projection": {"type": "albersUsa"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/js/US_States_SOVI_Infographics.topojson",
+    "format": {"type": "topojson", "feature": "US_States_SOVI_Infographics"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.STATE_ABBR_1",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/Shootings_by_state.csv"
+        },
+        "key": "State",
+        "fields": ["Total shootings"]
+      }
+    },
+    {"calculate": "datum['Total shootings'] / datum.properties.POPULATION * 1000000", "as": "Fatal shootings per 1000000 people"}
+  ],
+  "mark": {"type": "geoshape"},  
+  "encoding": {    
+        "color": {      
+          "field": "Fatal shootings per 1000000 people",      
+          "type": "quantitative",      
+          "scale": {"type": "linear"}    
+        },    
+        "tooltip": [         
+          {"field": "properties.STATE_NAME",
+            "type": "nominal",
+              "title": "State"}, 
+          {"field": "Fatal shootings per 1000000 people", "type": "quantitative","format":".0f"}    
+        ]  
+      }
+}
