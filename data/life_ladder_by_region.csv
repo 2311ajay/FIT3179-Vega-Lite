@@ -4,155 +4,155 @@
 "3",2007,"Central and Eastern Europe",5.15226666666667
 "4",2008,"Central and Eastern Europe",5.41825
 "5",2009,"Central and Eastern Europe",5.18
-"6",2010,"Central and Eastern Europe",5.1794
-"7",2011,"Central and Eastern Europe",5.27664705882353
-"8",2012,"Central and Eastern Europe",5.38123529411765
+"6",2010,"Central and Eastern Europe",5.179
+"7",2011,"Central and Eastern Europe",5.277
+"8",2012,"Central and Eastern Europe",5.381
 "9",2013,"Central and Eastern Europe",5.378
-"10",2014,"Central and Eastern Europe",5.46188235294118
-"11",2015,"Central and Eastern Europe",5.47941176470588
-"12",2016,"Central and Eastern Europe",5.63594117647059
+"10",2014,"Central and Eastern Europe",5.462
+"11",2015,"Central and Eastern Europe",5.479
+"12",2016,"Central and Eastern Europe",5.636
 "13",2017,"Central and Eastern Europe",5.774
-"14",2018,"Central and Eastern Europe",5.92711764705882
-"15",2019,"Central and Eastern Europe",5.8850625
-"16",2020,"Central and Eastern Europe",6.0766875
-"17",2006,"Commonwealth of Independent States",4.83472727272727
-"18",2007,"Commonwealth of Independent States",4.8873
-"19",2008,"Commonwealth of Independent States",5.12545454545455
-"20",2009,"Commonwealth of Independent States",5.07091666666667
-"21",2010,"Commonwealth of Independent States",4.93036363636364
-"22",2011,"Commonwealth of Independent States",5.09025
-"23",2012,"Commonwealth of Independent States",5.23566666666667
-"24",2013,"Commonwealth of Independent States",5.29358333333333
-"25",2014,"Commonwealth of Independent States",5.33416666666667
-"26",2015,"Commonwealth of Independent States",5.25466666666667
+"14",2018,"Central and Eastern Europe",5.927
+"15",2019,"Central and Eastern Europe",5.885
+"16",2020,"Central and Eastern Europe",6.077
+"17",2006,"Commonwealth of Independent States",4.835
+"18",2007,"Commonwealth of Independent States",4.887
+"19",2008,"Commonwealth of Independent States",5.125
+"20",2009,"Commonwealth of Independent States",5.071
+"21",2010,"Commonwealth of Independent States",4.93
+"22",2011,"Commonwealth of Independent States",5.09
+"23",2012,"Commonwealth of Independent States",5.236
+"24",2013,"Commonwealth of Independent States",5.294
+"25",2014,"Commonwealth of Independent States",5.334
+"26",2015,"Commonwealth of Independent States",5.255
 "27",2016,"Commonwealth of Independent States",5.166
-"28",2017,"Commonwealth of Independent States",5.30425
-"29",2018,"Commonwealth of Independent States",5.30075
-"30",2019,"Commonwealth of Independent States",5.53075
-"31",2020,"Commonwealth of Independent States",5.64157142857143
+"28",2017,"Commonwealth of Independent States",5.304
+"29",2018,"Commonwealth of Independent States",5.301
+"30",2019,"Commonwealth of Independent States",5.531
+"31",2020,"Commonwealth of Independent States",5.642
 "32",2005,"East Asia",6.516
 "33",2006,"East Asia",5.398
-"34",2007,"East Asia",5.36925
-"35",2008,"East Asia",5.22083333333333
+"34",2007,"East Asia",5.369
+"35",2008,"East Asia",5.221
 "36",2009,"East Asia",5.336
-"37",2010,"East Asia",5.54733333333333
-"38",2011,"East Asia",5.8435
-"39",2012,"East Asia",5.5935
-"40",2013,"East Asia",5.6824
-"41",2014,"East Asia",5.59433333333333
-"42",2015,"East Asia",5.6794
-"43",2016,"East Asia",5.71983333333333
-"44",2017,"East Asia",5.6565
-"45",2018,"East Asia",5.7394
-"46",2019,"East Asia",5.78566666666667
-"47",2020,"East Asia",5.9565
+"37",2010,"East Asia",5.547
+"38",2011,"East Asia",5.843
+"39",2012,"East Asia",5.593
+"40",2013,"East Asia",5.682
+"41",2014,"East Asia",5.594
+"42",2015,"East Asia",5.679
+"43",2016,"East Asia",5.72
+"44",2017,"East Asia",5.656
+"45",2018,"East Asia",5.739
+"46",2019,"East Asia",5.786
+"47",2020,"East Asia",5.956
 "48",2005,"Latin America and Caribbean",6.796
-"49",2006,"Latin America and Caribbean",5.57611111111111
-"50",2007,"Latin America and Caribbean",5.80194117647059
-"51",2008,"Latin America and Caribbean",5.75015789473684
-"52",2009,"Latin America and Caribbean",6.36666666666667
-"53",2010,"Latin America and Caribbean",6.17963157894737
-"54",2011,"Latin America and Caribbean",6.04575
-"55",2012,"Latin America and Caribbean",6.08957894736842
+"49",2006,"Latin America and Caribbean",5.576
+"50",2007,"Latin America and Caribbean",5.802
+"51",2008,"Latin America and Caribbean",5.75
+"52",2009,"Latin America and Caribbean",6.367
+"53",2010,"Latin America and Caribbean",6.18
+"54",2011,"Latin America and Caribbean",6.046
+"55",2012,"Latin America and Caribbean",6.09
 "56",2013,"Latin America and Caribbean",6.159
-"57",2014,"Latin America and Caribbean",6.06535
-"58",2015,"Latin America and Caribbean",5.94089473684211
+"57",2014,"Latin America and Caribbean",6.065
+"58",2015,"Latin America and Caribbean",5.941
 "59",2016,"Latin America and Caribbean",5.897
-"60",2017,"Latin America and Caribbean",5.99265
-"61",2018,"Latin America and Caribbean",5.95116666666667
-"62",2019,"Latin America and Caribbean",6.11757894736842
-"63",2020,"Latin America and Caribbean",5.66018181818182
-"64",2005,"Middle East and North Africa",5.67683333333333
-"65",2006,"Middle East and North Africa",5.8704
-"66",2007,"Middle East and North Africa",5.60425
-"67",2008,"Middle East and North Africa",5.27244444444444
+"60",2017,"Latin America and Caribbean",5.993
+"61",2018,"Latin America and Caribbean",5.951
+"62",2019,"Latin America and Caribbean",6.118
+"63",2020,"Latin America and Caribbean",5.66
+"64",2005,"Middle East and North Africa",5.677
+"65",2006,"Middle East and North Africa",5.87
+"66",2007,"Middle East and North Africa",5.604
+"67",2008,"Middle East and North Africa",5.272
 "68",2009,"Middle East and North Africa",5.548
-"69",2010,"Middle East and North Africa",5.486875
-"70",2011,"Middle East and North Africa",5.30641176470588
-"71",2012,"Middle East and North Africa",5.25061111111111
-"72",2013,"Middle East and North Africa",5.43493333333333
-"73",2014,"Middle East and North Africa",5.4229375
-"74",2015,"Middle East and North Africa",5.364375
-"75",2016,"Middle East and North Africa",5.38158823529412
-"76",2017,"Middle East and North Africa",5.28682352941176
-"77",2018,"Middle East and North Africa",5.05566666666667
-"78",2019,"Middle East and North Africa",5.288625
-"79",2020,"Middle East and North Africa",5.36345454545455
-"80",2005,"North America and ANZ",7.3795
-"81",2006,"North America and ANZ",7.2435
+"69",2010,"Middle East and North Africa",5.487
+"70",2011,"Middle East and North Africa",5.306
+"71",2012,"Middle East and North Africa",5.251
+"72",2013,"Middle East and North Africa",5.435
+"73",2014,"Middle East and North Africa",5.423
+"74",2015,"Middle East and North Africa",5.364
+"75",2016,"Middle East and North Africa",5.382
+"76",2017,"Middle East and North Africa",5.287
+"77",2018,"Middle East and North Africa",5.056
+"78",2019,"Middle East and North Africa",5.289
+"79",2020,"Middle East and North Africa",5.363
+"80",2005,"North America and ANZ",7.38
+"81",2006,"North America and ANZ",7.244
 "82",2007,"North America and ANZ",7.471
-"83",2008,"North America and ANZ",7.35025
+"83",2008,"North America and ANZ",7.35
 "84",2009,"North America and ANZ",7.323
 "85",2010,"North America and ANZ",7.372
-"86",2011,"North America and ANZ",7.2845
-"87",2012,"North America and ANZ",7.22175
-"88",2013,"North America and ANZ",7.37175
-"89",2014,"North America and ANZ",7.2625
+"86",2011,"North America and ANZ",7.284
+"87",2012,"North America and ANZ",7.222
+"88",2013,"North America and ANZ",7.372
+"89",2014,"North America and ANZ",7.263
 "90",2015,"North America and ANZ",7.251
-"91",2016,"North America and ANZ",7.13125
-"92",2017,"North America and ANZ",7.24775
-"93",2018,"North America and ANZ",7.15125
+"91",2016,"North America and ANZ",7.131
+"92",2017,"North America and ANZ",7.248
+"93",2018,"North America and ANZ",7.151
 "94",2019,"North America and ANZ",7.123
-"95",2020,"North America and ANZ",7.11175
+"95",2020,"North America and ANZ",7.112
 "96",2005,"South Asia",5.225
-"97",2006,"South Asia",4.64475
-"98",2007,"South Asia",4.8936
-"99",2008,"South Asia",4.53466666666667
+"97",2006,"South Asia",4.645
+"98",2007,"South Asia",4.894
+"99",2008,"South Asia",4.535
 "100",2009,"South Asia",4.724
-"101",2010,"South Asia",4.78633333333333
-"102",2011,"South Asia",4.45166666666667
-"103",2012,"South Asia",4.4695
-"104",2013,"South Asia",4.46133333333333
-"105",2014,"South Asia",4.47833333333333
-"106",2015,"South Asia",4.53416666666667
-"107",2016,"South Asia",4.7208
-"108",2017,"South Asia",4.3195
-"109",2018,"South Asia",4.43228571428571
-"110",2019,"South Asia",4.1405
-"111",2020,"South Asia",4.7525
-"112",2006,"Southeast Asia",5.2395
-"113",2007,"Southeast Asia",5.49675
-"114",2008,"Southeast Asia",5.309375
-"115",2009,"Southeast Asia",5.25328571428571
+"101",2010,"South Asia",4.786
+"102",2011,"South Asia",4.452
+"103",2012,"South Asia",4.47
+"104",2013,"South Asia",4.461
+"105",2014,"South Asia",4.478
+"106",2015,"South Asia",4.534
+"107",2016,"South Asia",4.721
+"108",2017,"South Asia",4.319
+"109",2018,"South Asia",4.432
+"110",2019,"South Asia",4.141
+"111",2020,"South Asia",4.752
+"112",2006,"Southeast Asia",5.239
+"113",2007,"Southeast Asia",5.497
+"114",2008,"Southeast Asia",5.309
+"115",2009,"Southeast Asia",5.253
 "116",2010,"Southeast Asia",5.452
-"117",2011,"Southeast Asia",5.47625
-"118",2012,"Southeast Asia",5.166625
-"119",2013,"Southeast Asia",5.2095
-"120",2014,"Southeast Asia",5.58425
-"121",2015,"Southeast Asia",5.3995
+"117",2011,"Southeast Asia",5.476
+"118",2012,"Southeast Asia",5.167
+"119",2013,"Southeast Asia",5.21
+"120",2014,"Southeast Asia",5.584
+"121",2015,"Southeast Asia",5.399
 "122",2016,"Southeast Asia",5.26
-"123",2017,"Southeast Asia",5.193375
-"124",2018,"Southeast Asia",5.40255555555556
-"125",2019,"Southeast Asia",5.50433333333333
-"126",2020,"Southeast Asia",5.0114
-"127",2006,"Sub-Saharan Africa",4.07418181818182
-"128",2007,"Sub-Saharan Africa",4.3806
-"129",2008,"Sub-Saharan Africa",4.25436
-"130",2009,"Sub-Saharan Africa",4.3044
-"131",2010,"Sub-Saharan Africa",4.1568947368421
-"132",2011,"Sub-Saharan Africa",4.44684848484849
+"123",2017,"Southeast Asia",5.193
+"124",2018,"Southeast Asia",5.403
+"125",2019,"Southeast Asia",5.504
+"126",2020,"Southeast Asia",5.011
+"127",2006,"Sub-Saharan Africa",4.074
+"128",2007,"Sub-Saharan Africa",4.381
+"129",2008,"Sub-Saharan Africa",4.254
+"130",2009,"Sub-Saharan Africa",4.304
+"131",2010,"Sub-Saharan Africa",4.157
+"132",2011,"Sub-Saharan Africa",4.447
 "133",2012,"Sub-Saharan Africa",4.276
-"134",2013,"Sub-Saharan Africa",4.02825
-"135",2014,"Sub-Saharan Africa",4.04728125
+"134",2013,"Sub-Saharan Africa",4.028
+"135",2014,"Sub-Saharan Africa",4.047
 "136",2015,"Sub-Saharan Africa",4.174
-"137",2016,"Sub-Saharan Africa",4.13940625
-"138",2017,"Sub-Saharan Africa",4.39717142857143
-"139",2018,"Sub-Saharan Africa",4.5338
-"140",2019,"Sub-Saharan Africa",4.49931428571429
-"141",2020,"Sub-Saharan Africa",4.76157142857143
-"142",2005,"Western Europe",7.0831
-"143",2006,"Western Europe",6.881625
-"144",2007,"Western Europe",7.02011111111111
-"145",2008,"Western Europe",7.16546666666667
-"146",2009,"Western Europe",6.77246153846154
-"147",2010,"Western Europe",6.75664705882353
-"148",2011,"Western Europe",6.77876470588235
-"149",2012,"Western Europe",6.73047619047619
-"150",2013,"Western Europe",6.62331578947368
-"151",2014,"Western Europe",6.6272
-"152",2015,"Western Europe",6.69038095238095
-"153",2016,"Western Europe",6.76704761904762
-"154",2017,"Western Europe",6.8919
-"155",2018,"Western Europe",6.89805
-"156",2019,"Western Europe",6.94090476190476
-"157",2020,"Western Europe",6.91942105263158
+"137",2016,"Sub-Saharan Africa",4.139
+"138",2017,"Sub-Saharan Africa",4.397
+"139",2018,"Sub-Saharan Africa",4.534
+"140",2019,"Sub-Saharan Africa",4.499
+"141",2020,"Sub-Saharan Africa",4.762
+"142",2005,"Western Europe",7.083
+"143",2006,"Western Europe",6.882
+"144",2007,"Western Europe",7.02
+"145",2008,"Western Europe",7.165
+"146",2009,"Western Europe",6.772
+"147",2010,"Western Europe",6.757
+"148",2011,"Western Europe",6.779
+"149",2012,"Western Europe",6.73
+"150",2013,"Western Europe",6.623
+"151",2014,"Western Europe",6.627
+"152",2015,"Western Europe",6.69
+"153",2016,"Western Europe",6.767
+"154",2017,"Western Europe",6.892
+"155",2018,"Western Europe",6.898
+"156",2019,"Western Europe",6.941
+"157",2020,"Western Europe",6.919
