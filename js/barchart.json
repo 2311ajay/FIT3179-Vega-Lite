@@ -1,0 +1,176 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 600,
+  "width": "container",
+  "data": {
+    "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/Top%20and%20bottom%205%20countries.csv"
+  },
+  "layer": [
+    {
+      "params": [
+        {
+        "name": "brush",
+        "select": "interval",
+        "value": {"x": [2, 5], "y": ["Afghanistan", "Iceland"]}
+      }
+      ],
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "field": "Happiness_score",
+          "type": "quantitative",
+          "title": "Happiness score"
+        },
+        "color": {
+          "field": "Region",
+          "title": "Region",
+          "scale": {
+            "range": [
+              "#72B7b2",
+              "#B279A2",
+              "#EECa3B",
+              "blue"
+            ]
+          }
+        },
+
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Region", "type": "nominal"},
+          {
+            "field": "Happiness_score",
+            "type": "quantitative",
+            "title": "Happiness score"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": {"param": "brush"}}],
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "aggregate": "mean",
+          "field": "Happiness_score",
+          "type": "quantitative"
+        },
+        "color": {"value": "green"},
+        "size": {"value": 3}
+      }
+    },
+    {
+      "transform": [
+        {"filter": {"param": "brush"}},
+        {
+          "joinaggregate": [
+            {
+              "op": "mean",
+              "field": "Happiness_score",
+              "as": "Average Happiness score"
+            }
+          ]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "dx": 475,
+        "dy": -320,
+        "fontSize": 22
+      },
+      "encoding": {
+        "text": {"field": "Average Happiness score", "format": ".2f"},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Country == 'Afghanistan'"},
+        {
+          "calculate": "'Average happiness score of selected range: '",
+          "as": "text_annotation"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontWeight": "normal",
+        "dx": 282,
+        "dy": -320,
+        "fontSize": 18
+      },
+      "encoding": {
+        "text": {"field": "text_annotation"},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Country == 'Afghanistan'"},
+        {
+          "calculate": "'Most unhappy lb countries are lb loacated in lb Sub-Saharan Africa'",
+          "as": "text_annotation"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "dx": 30,
+        "dy": 200,
+        "fontSize": 17
+      },
+      "encoding": {
+        "text": {"field": "text_annotation"},
+        "color": {"value": "#964B00"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Country == 'Afghanistan'"},
+        {
+          "calculate": "'All the happiest lb countries are lb located in lb Western Europe'",
+          "as": "text_annotation"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "dx": 250,
+        "dy": 20,
+        "fontSize": 17
+      },
+      "encoding": {
+        "text": {"field": "text_annotation"},
+        "color": {"value": "blue"}
+      }
+    }
+  ],
+  "config": {
+    "axis": {
+      "labelFont": "Source Sans Pro, sans-serif",
+      "labelColor": "black",
+      "titleColor": "black",
+      "gridColor": "lighter",
+      "labelFontSize": 14,
+      "labelLimit": 500
+    },
+    "lineBreak": "lb",
+    "title": {
+      "fontSize": 15
+    },
+    "padding": {"left": 5, "top": 5, "right": 5, "bottom": 5},
+    "style": {
+      "guide-title": {"font": "Source Sans Pro, sans-serif", "fontSize": 15},
+      "text": {
+        "font": "Source Sans Pro, sans-serif",
+        "fontWeight": "normal",
+        "size": 14
+      }
+    }
+  }
+}
