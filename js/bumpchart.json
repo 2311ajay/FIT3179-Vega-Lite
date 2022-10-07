@@ -31,7 +31,14 @@
             },
     "encoding": {
       "x": {"field": "year", "type": "ordinal"},
-      "y": {"field": "rank", "type": "ordinal"},
+      "y": {"field": "rank", "type": "ordinal", 
+      "scale":{
+            "domain":[1,2,3,4,5]
+        },
+      "axis":{
+        "values":[1,2,3,4,5]
+      }
+      },
       "color": {
         "field": "Country", "type": "nominal",
         "scale": {
@@ -58,28 +65,43 @@
             ]
     }
   },
-  {
-      "transform": [
-        {"filter": "datum.Country == 'Germany'"},
-        {
-          "calculate": "'Most unhappy lb countries are lb loacated in lb Sub-Saharan Africa'",
-          "as": "text_annotation"
-        },
-        {
-          "calculate": "'https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg'",
-          "as": "url1"
+    {
+        "transform": [
+            {"filter": "datum.year > 2007"},
+            {
+        "sort": [
+            {"field": "Life Ladder", "order": "descending"}
+        ],
+        "window": [{
+            "op": "rank",
+            "as": "rank"
+        }],
+        "groupby": ["year"]
+        }],
+        
+        "mark": {"type": "image", "width": 50, "height": 50},
+        "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "rank", "type": "ordinal"},
+        "url": {"field": "imageUrl", "type": "nominal"},
+        "href":{"field": "wikiUrl"},
+        "tooltip": [
+                    {
+                        "field": "year",
+                        "type": "ordinal",
+                        "title": "Year"
+                    },
+                    {
+                        "field": "Country",
+                        "type": "nominal",
+                        "title": "Country"
+                    },
+                    {
+                        "field": "Life Ladder",
+                        "title": "Happiness score"
+                    }
+                ]
         }
-      ],
-      "mark": {
-        "type": "image", "width": 50, "height": 50,
-        "dx": 2020,
-        "dy": 5
-      },
-      "encoding": {
-        "url":{"field":"url1",
-              "type": "nominal"
-              }
-      }
     }
   ]
   
