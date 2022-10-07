@@ -12,15 +12,19 @@
 }
 
 .background_a {
-  background-color: rgb(252, 244, 172);
+  background-color: rgb(243, 237, 176);
 }
 
-.bg2 {
-  background-color: rgb(178, 224, 207);
+.background_b {
+  background-color: rgb(189, 222, 253);
 }
 
-.bg3 {
-	background-color: rgb(164, 199, 186);
+.background_c {
+  background-color: rgb(253, 189, 189);
+}
+
+.background_icons {
+  background-color: rgb(157, 203, 246);
 }
 
 .factor-icon {
