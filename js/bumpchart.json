@@ -1,13 +1,18 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "World Cup 2018: Group F Rankings",
-      "frame": "bounds"
-    },
-    "data": {
-      "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/world-happiness-report-compiled.csv"
-    },
-    "transform": [{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Relative ranking of the 5 happiest countries in the world",
+    "frame": "bounds"
+  },
+  "width":"container",
+  "height":500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/world-happiness-report-compiled-top5.csv"
+  },
+  "layer":[{
+    "transform": [
+        {"filter": "datum.year > 2007"},
+        {
       "sort": [
         {"field": "Life Ladder", "order": "descending"}
       ],
@@ -17,17 +22,65 @@
       }],
       "groupby": ["year"]
     }],
-    "mark": {"type": "line", "orient": "vertical"},
+    
+    "mark": {
+            "type": "line",           
+            "point": {
+                    "size": 300
+                }
+            },
     "encoding": {
       "x": {"field": "year", "type": "ordinal"},
       "y": {"field": "rank", "type": "ordinal"},
       "color": {
         "field": "Country", "type": "nominal",
         "scale": {
-          "domain": ["Germany", "Mexico", "South Korea", "Sweden"],
-          "range": ["black", "#127153", "#C91A3C", "#0C71AB"]
+          "domain": [
+            "Germany", "Denmark", "Sweden", "Finland", "Iceland"
+            ]
         }
+      },
+    "tooltip": [
+                {
+                    "field": "year",
+                    "type": "ordinal",
+                    "title": "Year"
+                },
+                {
+                    "field": "Country",
+                    "type": "nominal",
+                    "title": "Country"
+                },
+                {
+                    "field": "Life Ladder",
+                    "title": "Happiness score"
+                }
+            ]
+    }
+  },
+  {
+      "transform": [
+        {"filter": "datum.Country == 'Germany'"},
+        {
+          "calculate": "'Most unhappy lb countries are lb loacated in lb Sub-Saharan Africa'",
+          "as": "text_annotation"
+        },
+        {
+          "calculate": "'https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg'",
+          "as": "url1"
+        }
+      ],
+      "mark": {
+        "type": "image", "width": 50, "height": 50,
+        "dx": 2020,
+        "dy": 5
+      },
+      "encoding": {
+        "url":{"field":"url1",
+              "type": "nominal"
+              }
       }
     }
-  }
+  ]
   
+}
