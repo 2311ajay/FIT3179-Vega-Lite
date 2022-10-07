@@ -6,7 +6,7 @@
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   }, 
   "width": "container",
-  "height": 550,
+  "height": 650,
   "title": "Overall happiness of the world",
   "params": [
     {
@@ -32,7 +32,7 @@
     },
     {
       "name": "zoom_level",
-      "value": 190,
+      "value": 230,
       "bind": {
         "input": "range",
         "min": 190,
@@ -43,11 +43,11 @@
     },
     {
       "name": "center_to",
-      "value": [0, 15],
+      "value": [0, 0],
       "bind": {
         "input": "select",
         "options": [
-          [0, 15],
+          [0, 0],
           [120, 30],
           [20, 0],
           [20, 50],
