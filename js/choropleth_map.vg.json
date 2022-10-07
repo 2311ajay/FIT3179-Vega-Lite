@@ -69,11 +69,23 @@
     }
   ],
   "projection": {
-    "type": "equalEarth",
+    "type": "equirectangular",
     "center": {"expr": "center_to"},
     "scale": {"expr": "zoom_level"}
   },
   "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/js/oceans.topojson",
+        "format": {"type": "topojson", "feature": "oceans"}
+      },
+      "mark": {"type": "geoshape"}, 
+      "projection":{
+          "type": "equirectangular",
+          "center": {"expr": "center_to"},
+          "scale": {"expr": "zoom_level"}
+        }
+    },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/js/ne_110m_admin_0_countries.topojson",
@@ -85,7 +97,12 @@
           "calculate": "'Data is not available in ' + datum.properties.NAME",
           "as": "note"
         }
-      ],
+      ],      
+      "projection":{
+        "type": "equirectangular",
+        "center": {"expr": "center_to"},
+        "scale": {"expr": "zoom_level"}
+      },
       "encoding": {"tooltip": {"field": "note"}}
     },
     {
@@ -107,7 +124,7 @@
       ],
       "layer": [
         {
-          "mark": {"type": "geoshape"},
+          "mark": {"type": "geoshape", "stroke":"aliceblue", "strokeWidth": 0.8},
           "encoding": {
             "color": {
               "field": "Ladder_score",
@@ -136,6 +153,18 @@
           }
         }
       ]
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Week-8/main/js/ne_110m.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "stroke":"aliceblue", "strokeWidth": 0.8},
+      "projection":{
+        "type": "equirectangular",
+        "center": {"expr": "center_to"},
+        "scale": {"expr": "zoom_level"}
+      }
     }
   ]
 }
