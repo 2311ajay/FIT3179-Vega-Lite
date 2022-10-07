@@ -1,0 +1,150 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A horizontal box plot showing median, min, and max",
+  "data": {
+    "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/world-happiness-report-2021-raw.csv"
+  },
+  "width": "container",
+  "height": 500,
+  "layer": [
+    {
+      "mark": {"type": "boxplot"},
+      "encoding": {
+        "y": {
+          "field": "Regional indicator",
+          "type": "nominal",
+          "title": "",
+          "axis": {"labelFont": "Source Sans Pro, sans-serif"}
+        },
+        "x": {
+          "field": "Ladder score",
+          "type": "quantitative",
+          "scale": {"zero": false},
+          "title": "Happiness score"
+        },
+        "color": {
+          "field": "Regional indicator",
+          "type": "nominal",
+          "legend": null,
+          "scale": {"scheme": "tableau10"}
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Regional indicator", "type": "nominal", "title": "Region"},
+          {
+            "field": "Ladder score",
+            "type": "quantitative",
+            "title": "Happiness score"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [{"calculate": "5.46", "as": "mean"}],
+      "mark": "rule",
+      "encoding": {
+        "x": {
+          "aggregate": "mean",
+          "field": "Ladder score",
+          "type": "quantitative"
+        },
+        "color": {"value": "firebrick"},
+        "size": {"value": 3},
+        "tooltip": [{"field": "mean", "title": "Average Happiness score"}]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Country == 'Czechia'"},
+        {
+          "calculate": "'Czechia is the happiest Central and Eastern Europe lb country by a large margin'",
+          "as": "text_annotation"
+        }
+      ],
+      "mark": {"type": "text", "fontWeight": "bold", "dx": 300, "dy": -195},
+      "encoding": {
+        "text": {"field": "text_annotation"},
+        "color": {"value": "red"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Country == 'Finland'"},
+        {
+          "calculate": "'Western Europe is the overall happiest region'",
+          "as": "text_annotation"
+        }
+      ],
+      "mark": {"type": "text", "fontWeight": "bold", "dx": 300, "dy": 200},
+      "encoding": {
+        "text": {"field": "text_annotation"},
+        "color": {"value": "grey"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Country == 'Haiti'"},
+        {
+          "calculate": "'The Middle East and North Africa has the lb widest range of percieved happiness'",
+          "as": "text_annotation"
+        }
+      ],
+      "mark": {"type": "text", "fontWeight": "bold", "dx": -250, "dy": -60},
+      "encoding": {
+        "text": {"field": "text_annotation"},
+        "color": {"value": "#59AAA5"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Country == 'Haiti'"},
+        {
+          "calculate": "'South Asia is the overall unhappiest region'",
+          "as": "text_annotation"
+        }
+      ],
+      "mark": {"type": "text", "fontWeight": "bold", "dx": -200, "dy": 50},
+      "encoding": {
+        "text": {"field": "text_annotation"},
+        "color": {"value": "purple"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Country == 'Haiti'"},
+        {
+          "calculate": "'Average Happiness score = 5.46'",
+          "as": "text_annotation"
+        }
+      ],
+      "mark": {"type": "text", "fontWeight": "bold", "dx": 149, "dy": 50},
+      "encoding": {
+        "text": {"field": "text_annotation"},
+        "color": {"value": "black"}
+      }
+    }
+  ],
+  "config": {
+    "axis": {
+      "labelFont": "Source Sans Pro, sans-serif",
+      "labelColor": "black",
+      "titleColor": "black",
+      "gridColor": "lighter",
+      "labelFontSize": 14,
+      "labelLimit": 500
+    },
+    "lineBreak": "lb",
+    "title": {
+      "fontSize": 15
+    },
+    "padding": {"left": 5, "top": 5, "right": 5, "bottom": 5},
+    "style": {
+      "guide-title": {"font": "Source Sans Pro, sans-serif", "fontSize": 15},
+      "text": {
+        "font": "Source Sans Pro, sans-serif",
+        "fontWeight": "normal",
+        "size": 15
+      }
+    }
+  }
+}
