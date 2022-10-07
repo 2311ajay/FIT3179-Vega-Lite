@@ -40,12 +40,7 @@
       }
       },
       "color": {
-        "field": "Country", "type": "nominal",
-        "scale": {
-          "domain": [
-            "Germany", "Denmark", "Sweden", "Finland", "Iceland"
-            ]
-        }
+        "field": "Country", "type": "nominal","legend":{}
       },
     "tooltip": [
                 {
