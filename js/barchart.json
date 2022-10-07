@@ -11,7 +11,7 @@
         {
         "name": "brush",
         "select": "interval",
-        "value": {"x": [2, 5], "y": ["Afghanistan", "Iceland"]}
+        "value": {"x": [2, 5], "y": ["Afghanistan", "Finland"]}
       }
       ],
       "mark": "bar",
