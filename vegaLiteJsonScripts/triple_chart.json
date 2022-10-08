@@ -130,7 +130,7 @@
     {
       "width": 400,
       "height": 685,
-      "title": "Top 20 happiest countries",
+      "title": "10 happiest countries and saddest countries",
       "transform": [
         {"filter": {"param": "time_brush"}},
         {"filter": "datum['Regional indicator'] != 'NA'"},
@@ -142,8 +142,8 @@
         {
           "window": [{"op": "rank", "as": "rank"}],
           "sort": [{"field": "AverageScore", "order": "descending"}]
-        },
-        {"filter": "datum.rank <= 10 || datum.rank >= 145"}
+        },        {"joinaggregate": [{"op": "max", "field": "rank", "as": "total"}]},
+        {"filter": "datum.rank <= 10 || datum.rank >= datum.total - 10"}
       ],
       "encoding": {
         "y": {
