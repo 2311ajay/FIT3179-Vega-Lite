@@ -143,7 +143,7 @@
           "window": [{"op": "rank", "as": "rank"}],
           "sort": [{"field": "AverageScore", "order": "descending"}]
         },
-        {"filter": "datum.rank <= 20"}
+        {"filter": "datum.rank <= 10 || datum.rank >= 145"}
       ],
       "encoding": {
         "y": {
