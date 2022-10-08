@@ -4,6 +4,15 @@
   "data": {
     "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/world-happiness-report-2021-raw.csv"
   },
+  "transform": [
+    {
+      "filter":"datum['Ladder score'] != null"
+    },
+        {
+          "calculate": "datum['Ladder score']",
+          "as": "ll"
+        }
+  ],
   "width": "container",
   "height": 500,
   "layer": [
@@ -40,7 +49,6 @@
       }
     },
     {
-      "transform": [{"calculate": "5.46", "as": "mean"}],
       "mark": "rule",
       "encoding": {
         "x": {
@@ -50,7 +58,7 @@
         },
         "color": {"value": "firebrick"},
         "size": {"value": 3},
-        "tooltip": [{"field": "mean", "title": "Average Happiness score"}]
+        "tooltip": [{"field": "Ladder score", "aggregate":"mean", "title": "Average Happiness score","format":".2f"}]
       }
     },
     {
@@ -110,16 +118,32 @@
       }
     },
     {
+      "mark": {"type": "text", "fontWeight": "bold", "dx": 350},
       "transform": [
-        {"filter": "datum.Country == 'Haiti'"},
         {
-          "calculate": "'Average Happiness score = 5.46'",
+          "filter":"datum['Regional indicator'] == 'South Asia'"
+        },
+        {
+          "calculate": "datum['Ladder score']",
+          "as": "ll"
+        },
+        {
+          "calculate": "'Average Happiness score = 5.48'",
           "as": "text_annotation"
         }
       ],
-      "mark": {"type": "text", "fontWeight": "bold", "dx": 149, "dy": 50},
       "encoding": {
-        "text": {"field": "text_annotation"},
+        "x": {
+          "aggregate": "mean",
+          "field": "ll",
+          "type": "quantitative"
+        },
+        "y":{
+          "field": "Regional indicator"
+        },
+        "text":{
+          "field":"text_annotation"
+        },
         "color": {"value": "black"}
       }
     }
