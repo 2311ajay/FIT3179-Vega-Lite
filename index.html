@@ -180,10 +180,10 @@
         </div>
         <!-- These are the tabs that handle the dynamic texts -->
         <div class="row background_b p-3 sp" id="gdp_sp">
-          <div class="col-sm-12 col-md-8 d-flex justify-content-center">
+          <div class="col-sm-12 justify-content-center bubble_plot_chart">
             <div id="vis2a" class="w-100"></div>
           </div>
-          <div class="col-sm-12 col-md-4 d-flex justify-content-center">
+          <div class="col-sm-12 justify-content-center bubble_plot_text" >
             <span class="p-3">
               <div class="h3 pb-3 fw-bold">Who says <span class="pop">money</span> can't make you happy!</div>
               The bubble plot shows a <span style="font-style:italic;">high</span> correlation between <b>happiness</b> and
@@ -196,10 +196,10 @@
         </div>
 
         <div class="row background_b p-3 sp" id="freedom_sp">
-          <div class="col-sm-12 col-md-8 d-flex justify-content-center">
-            <div id="vis2c" class="w-100"></div>
+          <div class="col-sm-12 justify-content-center bubble_plot_chart">
+            <div id="vis2b" class="w-100"></div>
           </div>
-          <div class="col-sm-12 col-md-4 d-flex justify-content-center">
+          <div class="col-sm-12 justify-content-center bubble_plot_text">
             <span class="p-3">
               <div class="h3 pb-3 fw-bold"><span class="pop">Free</span> as a bird!</div>
               The bubble plot shows a <span style="font-style:italic;">moderate</span> correlation between 
@@ -219,10 +219,10 @@
         </div>
 
         <div class="row background_b p-3 sp" id="generosity_sp">
-          <div class="col-sm-12 col-md-8 d-flex justify-content-center">
-            <div id="vis2d" class="w-100"></div>
+          <div class="col-sm-12 justify-content-center bubble_plot_chart">
+            <div id="vis2c" class="w-100"></div>
           </div>
-          <div class="col-sm-12 col-md-4 d-flex justify-content-center">
+          <div class="col-sm-12 justify-content-center bubble_plot_text" >
             <span class="p-3">
               <div class="h3 pb-3 fw-bold"><span class="pop">Generousity</span> comes from the wallet not the heart!</div>
               <b>Happiness</b> and
@@ -239,10 +239,10 @@
         </div>
 
         <div class="row background_b p-3 sp" id="life_sp">
-          <div class="col-sm-12 col-md-8 d-flex justify-content-center">
-            <div id="vis2e" class="w-100 bgwhite"></div>
+          <div class="col-sm-12 justify-content-center bubble_plot_chart">
+            <div id="vis2d" class="w-100"></div>
           </div>
-          <div class="col-sm-12 col-md-4 d-flex justify-content-center">
+          <div class="col-sm-12 justify-content-center bubble_plot_text" >
             <span class="p-3">
               <div class="h3 pb-3 fw-bold">Smiles add miles to <span class="pop">life</span>!</div>
               There's a <span style="font-style:italic;">high</span> correlation between <span class="fw-bold">happiness</span> and
@@ -431,17 +431,17 @@
         .catch(console.error);
 
       var vis2b = "vegaLiteJsonScripts/freedom_corruption_bubbleplot.json";
-      vegaEmbed("#vis2c", vis2b)
+      vegaEmbed("#vis2b", vis2b)
         .then(function (result) {})
         .catch(console.error);
 
       var vis2c = "vegaLiteJsonScripts/generosity_bubbleplot.json";
-      vegaEmbed("#vis2d", vis2c)
+      vegaEmbed("#vis2c", vis2c)
         .then(function (result) {})
         .catch(console.error);
 
       var vis2d = "vegaLiteJsonScripts/longevity_bubbleplot.json";
-      vegaEmbed("#vis2e", vis2d)
+      vegaEmbed("#vis2d", vis2d)
         .then(function (result) {})
         .catch(console.error);
 
