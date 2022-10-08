@@ -2,7 +2,7 @@
   "title": "Happiness Score against Freedom to make life choices",
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A scatterplot showing body mass and flipper lengths of penguins.",
-  "width": 580,
+  "width": 650,
   "height": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/world-happiness-report-2021-raw.csv"
