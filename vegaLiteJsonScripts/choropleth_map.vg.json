@@ -159,6 +159,38 @@
               }
             ]
           }
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/world-happiness-report-with-latLong.csv"
+          },
+          "encoding": {
+            "longitude": {"field": "longitude", "type": "quantitative"},
+            "latitude": {"field": "latitude", "type": "quantitative"}
+          },
+          "transform": [
+            {
+              "filter": "Region_selection == null || datum['Regional indicator'] == Region_selection"
+            },
+            {
+              "window": [{"op": "rank", "as": "ranking"}],
+              "sort": [{"field": "Ladder score", "order": "descending"}]
+            },
+            {"filter": "datum.ranking == 1"},
+            {
+              "calculate": "Region_selection ? 'Happiest country in ' + datum['Regional indicator'] + ' is ' + datum.Country : 'Happiest country in the world is ' + datum.Country",
+              "as": "text_annotation"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {"type": "text", "strokeWidth": 35, "color": "black"},
+              "encoding": {
+                "text": {"field": "text_annotation"},
+                "size": {"value": 20}
+              }
+            }
+          ]
         }
       ]
     },
