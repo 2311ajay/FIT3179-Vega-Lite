@@ -7,7 +7,7 @@
   }, 
   "width": "container",
   "height": 650,
-  "title": "Overall happiness of the world",
+  "title": {"text":"Overall happiness of the world", "fontSize":16},
   "params": [
     {
       "name": "Region_selection",
@@ -48,21 +48,29 @@
         "input": "select",
         "options": [
           [0, 0],
+          [0, 50],
+          [15, 50],
           [120, 30],
-          [20, 0],
-          [20, 50],
-          [-110, 40],
+          [80, 25],
+          [110, 5],
+          [-70, -10],
+          [-110, 50],
+          [20, 10],
           [-70, -20],
           [145, -25]
         ],
         "labels": [
           "Reset",
-          "Asia",
-          "Africa",
-          "Europe",
+          "Western Europe",
+          "Central and Eastern Europe",
+          "East Asia",
+          "South Asia",
+          "Southeast Asia",
+          "Latin America and Caribbean",
           "North America",
+          "Africa",
           "South America",
-          "Oceania"
+          "ANZ"
         ],
         "name": "Map Centre: "
       }
@@ -129,7 +137,7 @@
             "color": {
               "field": "Ladder_score",
               "type": "quantitative",
-              "scale": {"domain": [2, 8], "scheme": "redyellowgreen"},
+              "scale": {"scheme": "redyellowgreen"},
               "title": "Happiness Score"
             },
             "tooltip": [
