@@ -335,7 +335,10 @@
           "params": [
             {
               "name": "time_brush",
-              "select": {"type": "interval", "encodings": ["x"]}
+              "select": {
+                "type": "interval", "encodings": ["x"],
+                "mark": {"fill":"antiquewhite", "fillOpacity": 10, "stroke":"greenyellow" }
+              }
             }
           ],
           "mark": {
