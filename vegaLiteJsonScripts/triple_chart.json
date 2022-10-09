@@ -3,6 +3,27 @@
   "data": {
     "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/world-happiness-report-with-regions-clean.csv"
   },
+  "params": [
+            {
+            "name": "interpolate",
+            "value": "cardinal",
+            "bind": {
+              "input": "select",
+              "options": [
+                "cardinal",
+                "linear"
+              ],
+              "labels": [
+                "Normalised",
+                "Linear"
+              ]
+            }
+          },
+          {
+            "name": "tension",
+            "value": 0,
+            "bind": {"input": "range", "min": 0, "max": 1, "step": 0.05}
+          }],
   "hconcat": [
     {
       "vconcat": [
@@ -90,7 +111,6 @@
         {
           "height": 300,
           "width": 800,
-          "mark": "line",
           "transform": [
             {"filter": "datum['Regional indicator'] != 'NA'"},
             {"filter": "datum.year > 2005"}
@@ -101,12 +121,19 @@
               "select": {"type": "interval", "encodings": ["x"]}
             }
           ],
+          "mark": {
+                "type": "area",
+                "line": true,
+                "interpolate": {"expr": "interpolate"},
+                "tension": {"expr": "tension"}
+          },
           "encoding": {
             "x": {"field": "year", "type": "nominal", "title": "Year"},
             "y": {
               "aggregate": "mean",
               "field": "ll",
-              "title": "Happiness score"
+              "title": "Happiness score",
+              "stack": "normalize"
             },
             "color": {"field": "Regional indicator"},
             "tooltip": [
