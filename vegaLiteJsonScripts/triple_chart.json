@@ -27,88 +27,304 @@
           }],
   "hconcat": [
     {
-      "vconcat": [
-        
+      "vconcat": [      
         {
+        "height": 350,
+        "width": 800,
         "transform": [
           {"filter": {"param": "time_brush"}},
-          {"filter": "datum['Regional indicator'] != 'NA'"}
-          ],
-
-      "facet": {
-        "column": {
-          "field": "Regional indicator", "type": "ordinal",
-          "header": {"labelAngle": 0, "title": "", "labelFontSize":0}
-        }
-      },
-      "spacing": 10,
-      "spec": {
-        "height":350,       
-        "width": 69,
-        "encoding": {
-          "y": {
-            "type": "quantitative","axis":null,
-            "scale": {"nice": true,"domain":[0,9]},
-            "title": null
-          },
-          "opacity": {
-            "condition": {"param": "region", "value": 1},
-            "value": 0.4
-          }
-        },
-        "layer": [{
-          "mark": {"type": "bar", "color": "#eee"},
-          "encoding": {"y": {"field": "ll", "aggregate":"q3"}}
-        },{
-          "mark": {"type": "bar", "color": "#ddd"},
-          "encoding": {"y": {"field": "ll", "aggregate":"min"}}
-        },{
-          "mark": {"type": "bar", "color": "#ccc"},
-          "encoding": {"y": {"field": "ll", "aggregate":"min"}}
-        },{
-          "mark": {"type": "bar", "color": "lightsteelblue", "size": 10},
-          "encoding": {"y": {"field": "ll", "aggregate":"max"}}
-        },{
-          "mark": {"type": "bar", "size": 10},
-          "params": [
-            {
-              "name": "region",
-              "select": {"type": "point", "fields": ["Regional indicator"]},
-              "bind": "legend"
-            }
-          ],
-          "encoding": {"y": {"field": "ll", "aggregate":"average"},
-          "color": {
-                  "field": "Regional indicator",
-                  "title":"",
-                  "legend": {
-                    "columnPadding":40,
-                    "titlePadding":10,
-                    "title": "Filter the charts by clicking on a region",
-                    "orient": "top",
-                    "titleFontSize":20,
-                    "titleFont":"Source Sans Pro,sans-serif",
-                    "titleLimit":500
-                  }
-                },
-            "tooltip": [
-              {"field": "Regional indicator", "title": "Region"},
+          {"filter": "datum['Regional indicator'] != 'NA'"},
+          {"filter": "datum.year > 2005"}
+        ],
+        "layer": [
               {
-                "aggregate": "mean",
+              "mark": {"type": "bar", "width": 45, "color": "#ddd"},
+              "encoding": {
+              "x": {
+                "field": "Regional indicator",
+                "type": "nominal",
+                "axis": null
+                },
+              "y": {
+                "aggregate": "min",
                 "field": "ll",
-                "title": "Average Happiness score",
-                "format": ".2f"
+                "type": "quantitative",
+                "title": "Average Happiness score"
+                },
+                "tooltip": [
+                {"field": "Regional indicator", "title": "Region"},
+                {
+                  "aggregate": "min",
+                  "field": "ll",
+                  "title": "Lowest Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "q1",
+                  "field": "ll",
+                  "title": "First quartile Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "mean",
+                  "field": "ll",
+                  "title": "Average Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "q3",
+                  "field": "ll",
+                  "title": "Third quartile Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "max",
+                  "field": "ll",
+                  "title": "Highest Happiness score",
+                  "format": ".2f"
+                }
+              ],
+              "opacity": {
+              "condition": {"param": "region", "value": 1},
+              "value": 0.4
+                  }
+                }
+              },  
+              {
+              "mark": {"type": "bar", "width": 35, "color": "#ccc"},
+              "encoding": {
+              "x": {
+                "field": "Regional indicator",
+                "type": "nominal",
+                "axis": null
+                },
+              "y": {
+                "aggregate": "q1",
+                "field": "ll",
+                "type": "quantitative",
+                "title": "Average Happiness score"
+                },
+                "tooltip": [
+                {"field": "Regional indicator", "title": "Region"},
+                {
+                  "aggregate": "min",
+                  "field": "ll",
+                  "title": "Lowest Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "q1",
+                  "field": "ll",
+                  "title": "First quartile Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "mean",
+                  "field": "ll",
+                  "title": "Average Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "q3",
+                  "field": "ll",
+                  "title": "Third quartile Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "max",
+                  "field": "ll",
+                  "title": "Highest Happiness score",
+                  "format": ".2f"
+                }
+              ],
+              "opacity": {
+              "condition": {"param": "region", "value": 1},
+              "value": 0.4
+                  }
+                }
+              },  
+              {
+              "mark": {"type": "bar", "width": 20, "color": "lightsteelblue"},
+              "encoding": {
+              "x": {
+                "field": "Regional indicator",
+                "type": "nominal",
+                "axis": null
+                },
+              "y": {
+                "aggregate": "q3",
+                "field": "ll",
+                "type": "quantitative",
+                "title": "Average Happiness score"
+                },
+                 "tooltip": [
+                {"field": "Regional indicator", "title": "Region"},
+                {
+                  "aggregate": "min",
+                  "field": "ll",
+                  "title": "Lowest Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "q1",
+                  "field": "ll",
+                  "title": "First quartile Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "mean",
+                  "field": "ll",
+                  "title": "Average Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "q3",
+                  "field": "ll",
+                  "title": "Third quartile Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "max",
+                  "field": "ll",
+                  "title": "Highest Happiness score",
+                  "format": ".2f"
+                }
+              ],
+              "opacity": {
+              "condition": {"param": "region", "value": 1},
+              "value": 0.4
+                  }
+                }
+              }, 
+              {
+              "mark": {"type": "tick", "color": "black"},
+              "encoding": {
+              "x": {
+                "field": "Regional indicator",
+                "type": "nominal",
+                "axis": null
+                },
+              "y": {
+                "aggregate": "max",
+                "field": "ll",
+                "type": "quantitative",
+                "title": "Average Happiness score"
+                },
+                "tooltip": [
+                {"field": "Regional indicator", "title": "Region"},
+                {
+                  "aggregate": "min",
+                  "field": "ll",
+                  "title": "Lowest Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "q1",
+                  "field": "ll",
+                  "title": "First quartile Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "mean",
+                  "field": "ll",
+                  "title": "Average Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "q3",
+                  "field": "ll",
+                  "title": "Third quartile Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "max",
+                  "field": "ll",
+                  "title": "Highest Happiness score",
+                  "format": ".2f"
+                }
+              ],
+              "opacity": {
+              "condition": {"param": "region", "value": 1},
+              "value": 0.4
+                  }
+                }
+              }, 
+
+              {
+                "mark": {"type": "bar", "width": 25},
+                "params": [
+              {
+                "name": "region",
+                "select": {"type": "point", "fields": ["Regional indicator"]},
+                "bind": "legend"
               }
-            ]
+            ],
+            "encoding": {
+              "x": {
+                "field": "Regional indicator",
+                "type": "nominal",
+                "axis": null
+              },
+              "y": {
+                "aggregate": "average",
+                "field": "ll",
+                "type": "quantitative",
+                "title": "Average Happiness score"
+              },
+              "color": {
+                "field": "Regional indicator",
+                "title": "",
+                "legend": {
+                  "columnPadding": 40,
+                  "titlePadding": 10,
+                  "title": "Filter the charts by clicking on a region",
+                  "orient": "top",
+                  "titleFontSize": 20,
+                  "titleFont": "Source Sans Pro,sans-serif",
+                  "titleLimit": 500
+                }
+              },
+              "tooltip": [
+                {"field": "Regional indicator", "title": "Region"},
+                {
+                  "aggregate": "min",
+                  "field": "ll",
+                  "title": "Lowest Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "q1",
+                  "field": "ll",
+                  "title": "First quartile Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "mean",
+                  "field": "ll",
+                  "title": "Average Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "q3",
+                  "field": "ll",
+                  "title": "Third quartile Happiness score",
+                  "format": ".2f"
+                },
+                {
+                  "aggregate": "max",
+                  "field": "ll",
+                  "title": "Highest Happiness score",
+                  "format": ".2f"
+                }
+              ],
+              "opacity": {
+                "condition": {"param": "region", "value": 1},
+                "value": 0.4
+              }
+            }
           }
-        },{
-          "mark": {"type": "tick", "color": "black"},
-          "encoding": {"y": {"field": "ll", "aggregate":"max"}}
-        }
         ]
       },
-      "resolve": {"scale": {"y": "independent"}}
-    },
         {
           "height": 300,
           "width": 800,
