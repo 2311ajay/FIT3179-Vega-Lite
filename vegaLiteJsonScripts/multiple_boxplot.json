@@ -72,7 +72,7 @@
       "mark": {"type": "text", "fontWeight": "bold", "dx": 300, "dy": -195},
       "encoding": {
         "text": {"field": "text_annotation"},
-        "color": {"value": "red"}
+        "color": {"value": "#1f77b4"}
       }
     },
     {
@@ -86,7 +86,7 @@
       "mark": {"type": "text", "fontWeight": "bold", "dx": 300, "dy": 200},
       "encoding": {
         "text": {"field": "text_annotation"},
-        "color": {"value": "grey"}
+        "color": {"value": "#17becf"}
       }
     },
     {
@@ -100,7 +100,7 @@
       "mark": {"type": "text", "fontWeight": "bold", "dx": -250, "dy": -60},
       "encoding": {
         "text": {"field": "text_annotation"},
-        "color": {"value": "#59AAA5"}
+        "color": {"value": "#9467bd"}
       }
     },
     {
@@ -114,7 +114,7 @@
       "mark": {"type": "text", "fontWeight": "bold", "dx": -200, "dy": 50},
       "encoding": {
         "text": {"field": "text_annotation"},
-        "color": {"value": "purple"}
+        "color": {"value": "#e377c2"}
       }
     },
     {
