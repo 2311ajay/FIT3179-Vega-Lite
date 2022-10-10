@@ -29,7 +29,7 @@
     {
       "vconcat": [      
         {
-        "height": 350,
+        "height": 450,
         "width": 800,
         "transform": [
           {"filter": {"param": "time_brush"}},
@@ -327,7 +327,7 @@
         ]
       },
         {
-          "height": 300,
+          "height": 200,
           "width": 800,
           "transform": [
             {"filter": "datum['Regional indicator'] != 'NA'"},
@@ -377,7 +377,7 @@
     },
     {
       "width": 400,
-      "height": 685,
+      "height": 680,
       "title": "10 happiest countries and saddest countries",
       "transform": [
         {"filter": {"param": "time_brush"}},
