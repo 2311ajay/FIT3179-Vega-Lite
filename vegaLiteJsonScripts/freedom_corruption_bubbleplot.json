@@ -33,6 +33,7 @@
           "field":"Perceptions of corruption","type":"quantitative","title":"Perceptions of corruption"
         },
         "color": {
+          "scale": {"scheme": "category10"},
           "field": "Regional indicator",
           "type": "nominal",
           "title":"Region"

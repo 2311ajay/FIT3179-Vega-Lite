@@ -49,6 +49,7 @@
           "title": "Social support"
         },
         "color": {
+          "scale": {"scheme": "category10"},
           "field": "Regional indicator",
           "type": "nominal",
           "title": "Region"

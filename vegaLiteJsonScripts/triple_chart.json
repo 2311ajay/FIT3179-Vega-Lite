@@ -274,6 +274,7 @@
               "color": {
                 "field": "Regional indicator",
                 "title": "",
+                "scale":{"scheme":"category10"},
                 "legend": {
                   "columnPadding": 40,
                   "titlePadding": 10,
@@ -355,7 +356,7 @@
               "title": "Happiness score",
               "stack": "normalize"
             },
-            "color": {"field": "Regional indicator"},
+            "color": {"field": "Regional indicator","scale":{"scheme":"category10"}},
             "tooltip": [
               {"field": "year", "title": "Year"},
               {"field": "Regional indicator", "title": "Region"},

@@ -33,6 +33,7 @@
           "field":"Density","type":"quantitative","title":"Density per sq km"
         },
         "color": {
+          "scale": {"scheme": "category10"},
           "field": "Regional indicator",
           "type": "nominal",
           "title":"Region"

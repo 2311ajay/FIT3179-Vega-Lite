@@ -27,11 +27,12 @@
           "field": "Region",
           "title": "Region",
           "scale": {
+            "scheme": "category10",
             "range": [
-              "#72B7b2",
-              "#B279A2",
-              "#EECa3B",
-              "blue"
+              "#9568bd",
+              "#e377c2",
+              "#bcbd22",
+              "#17becf"
             ]
           }
         },
