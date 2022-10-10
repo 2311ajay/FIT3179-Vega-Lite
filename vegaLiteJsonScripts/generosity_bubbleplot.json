@@ -125,7 +125,7 @@
         "text": {
           "field": "text_annotation"
         },
-        "color":{"value":"#f56991"},
+        "color":{"value":"#7f7f7f"},
         "size":{"value":15}
       }
     }

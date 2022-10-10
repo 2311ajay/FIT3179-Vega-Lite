@@ -134,7 +134,7 @@
         "text": {
           "field": "text_annotation"
         },
-        "color":{"value":"#964B00"},
+        "color":{"value":"#bcbd22"},
         "size":{"value":15}
       }
     },
@@ -158,7 +158,7 @@
         "text": {
           "field": "text_annotation"
         },
-        "color":{"value":"#964B00"},
+        "color":{"value":"#17becf"},
         "size":{"value":15}
       }
     }

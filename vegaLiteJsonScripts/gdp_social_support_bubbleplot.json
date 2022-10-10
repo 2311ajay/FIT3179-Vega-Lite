@@ -173,7 +173,7 @@
           "field": "text_annotation"
         },
         "color": {
-          "value": "grey"
+          "value": "#17becf"
         },
         "size": {
           "value": 15
