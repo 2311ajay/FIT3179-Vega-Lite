@@ -23,7 +23,7 @@
           "field": "Regional indicator",
           "type": "nominal",
           "title": "",
-          "axis": {"labelFont": "Noto Sans', sans-serif"}
+          "axis": {"labelFont": "Noto Sans, sans-serif"}
         },
         "x": {
           "field": "Ladder score",
@@ -150,7 +150,7 @@
   ],
   "config": {
     "axis": {
-      "labelFont": "Noto Sans', sans-serif",
+      "labelFont": "Noto Sans, sans-serif",
       "labelColor": "black",
       "titleColor": "black",
       "gridColor": "lighter",
@@ -163,9 +163,9 @@
     },
     "padding": {"left": 5, "top": 5, "right": 5, "bottom": 5},
     "style": {
-      "guide-title": {"font": "Noto Sans', sans-serif", "fontSize": 15},
+      "guide-title": {"font": "Noto Sans, sans-serif", "fontSize": 15},
       "text": {
-        "font": "Noto Sans', sans-serif",
+        "font": "Noto Sans, sans-serif",
         "fontWeight": "normal",
         "size": 15
       }
