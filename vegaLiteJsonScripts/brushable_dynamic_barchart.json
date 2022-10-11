@@ -149,7 +149,7 @@
   ],
   "config": {
     "axis": {
-      "labelFont": "Source Sans Pro, sans-serif",
+      "labelFont": "Noto Sans', sans-serif",
       "labelColor": "black",
       "titleColor": "black",
       "gridColor": "lighter",
@@ -162,9 +162,9 @@
     },
     "padding": {"left": 5, "top": 5, "right": 5, "bottom": 5},
     "style": {
-      "guide-title": {"font": "Source Sans Pro, sans-serif", "fontSize": 15},
+      "guide-title": {"font": "Noto Sans', sans-serif", "fontSize": 15},
       "text": {
-        "font": "Source Sans Pro, sans-serif",
+        "font": "Noto Sans', sans-serif",
         "fontWeight": "normal",
         "size": 14
       }

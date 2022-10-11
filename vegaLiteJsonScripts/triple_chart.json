@@ -456,7 +456,7 @@
   ],
   "config": {
     "axis": {
-      "labelFont": "Source Sans Pro, sans-serif",
+      "labelFont": "Noto Sans', sans-serif",
       "labelAngle": 0,
       "labelColor": "black",
       "titleColor": "black",
@@ -467,12 +467,12 @@
     "padding": {"left": 5, "top": 5, "right": 5, "bottom": 5},
     "style": {
       "guide-title": {
-        "font": "Source Sans Pro, sans-serif",
+        "font": "Noto Sans', sans-serif",
         "limit": 400,
         "fontSize": 15
       },
       "text": {
-        "font": "Source Sans Pro, sans-serif",
+        "font": "Noto Sans', sans-serif",
         "fontWeight": "normal",
         "size": 14
       }
@@ -481,7 +481,7 @@
       "columns": 5,
       "labelLimit": 300,
       "labelFontSize": 16,
-      "labelFont": "Source Sans Pro, sans-serif",
+      "labelFont": "Noto Sans', sans-serif",
       "labelPadding": 4,
       "rowPadding": 6
     }

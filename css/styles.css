@@ -35,6 +35,16 @@
   flex: 3;
 }
 
+.generalTextPadding {
+  flex: 1;
+  padding: 10px;
+}
+
+.headerTint{
+  /* filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg); */
+  background-color: rgb(210, 193, 13);
+}
+
 /* color blocks */
 .midEast {
   color: #9467bd;
@@ -115,11 +125,6 @@ body {
 select {
   background-color: rgb(255, 255, 255);
   padding: 2px;
-}
-
-.textContainer {
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .pop {
