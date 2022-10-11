@@ -281,7 +281,7 @@
                   "title": "Filter the charts by clicking on a region",
                   "orient": "top",
                   "titleFontSize": 20,
-                  "titleFont": "Source Sans Pro,sans-serif",
+                  "titleFont": "Noto Sans,sans-serif",
                   "titleLimit": 500
                 }
               },
