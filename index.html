@@ -275,44 +275,6 @@
       </div>
     </div>
 
-    <!-- Bar chart section (Top 5 saddest and happiest countries) -->
-    <div class="section p-3">
-      <div class="container">
-        <div class="row background_a">
-          <div class="col-12 mt-3 mx-3">
-            <h1 class="fw-bold">
-              Top 5 Happiest and Saddest Countries
-            </h1>
-          </div>
-          <div >
-            <p class="px-3 fs-6 hints">
-            The following <b>bar chart</b> allows brushing to view the
-              average happiness of the select nations.
-            </p>
-          </div>
-          <div class="col-12 mt-3 mx-3" style="display: flex;">
-            <div id="vis4" style="flex: 4;"></div>
-            <div class="justify-content-center" style="flex: 1; padding-right: 20px;">
-              <br><br>
-              <div class="flex">
-                <b>All</b> the top 5 happiest countries are from
-                <span class="fw-bold WE" >Western Europe</span>. 
-                This may be due to the high GDP per capita and social security in the region as observed in the scatter plots.
-              </div>
-              <br><br><br><br><br><br><br>
-              <div class="bottom">
-                On the other hand, the unhappiest country is
-                <b><a style="color: black;" href="https://en.wikipedia.org/wiki/Afghanistan">Afghanistan</a></b>, 
-                which is also the only <span class="fw-bold sAsia" >South Asian</span> country that is
-                ranked within top 10 unhappiest country in the world.
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
     <!-- Radar chart section -->
     <div class="section p-3">
       <div class="container">
@@ -321,7 +283,7 @@
             <div class="h1 fw-bold">Analysing the Happiest and Saddest Countries</div>
           </div>
           <div class="col-12 mx-3 mt-3 generalTextPadding">
-            <span class="">
+            <span >
               The 3 <b style="color: #006400;">happiest</b> and <b style="color: #990000;">saddest</b>
               countries have been selected from the bar chart above. Note how 
               <b>GDP, Social Support, Life Expectancy and Freedom</b>  
@@ -339,6 +301,44 @@
         </div>
       </div>
     </div>
+
+        <!-- Bar chart section (Top 5 saddest and happiest countries) -->
+        <div class="section p-3">
+          <div class="container">
+            <div class="row background_a">
+              <div class="col-12 mt-3 mx-3">
+                <h1 class="fw-bold">
+                  Top 5 Happiest and Saddest Countries
+                </h1>
+              </div>
+              <div >
+                <p class="px-3 fs-6 hints">
+                The following <b>lollipop chart</b> allows brushing to view the
+                  average happiness of the select nations.
+                </p>
+              </div>
+              <div class="col-12 mt-3 mx-3" style="display: flex;">
+                <div id="vis4" style="flex: 4;"></div>
+                <div class="justify-content-center" style="flex: 1; padding-right: 20px;">
+                  <br><br>
+                  <div class="flex">
+                    <b>All</b> the top 5 happiest countries are from
+                    <span class="fw-bold WE" >Western Europe</span>. 
+                    This may be due to the high GDP per capita and social security in the region as observed in the scatter plots.
+                  </div>
+                  <br><br><br><br><br><br><br>
+                  <div class="bottom">
+                    On the other hand, the unhappiest country is
+                    <b><a style="color: black;" href="https://en.wikipedia.org/wiki/Afghanistan">Afghanistan</a></b>, 
+                    which is also the only <span class="fw-bold sAsia" >South Asian</span> country that is
+                    ranked within top 10 unhappiest country in the world.
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
 
     <!-- Bumpchart section -->
     <div class="section p-3">
@@ -441,7 +441,7 @@
         .then(function (result) {})
         .catch(console.error);
 
-      var vis4 = "vegaLiteJsonScripts/brushable_dynamic_barchart.json";
+      var vis4 = "vegaLiteJsonScripts/lollipop.json";
       vegaEmbed("#vis4", vis4)
         .then(function (result) {})
         .catch(console.error);

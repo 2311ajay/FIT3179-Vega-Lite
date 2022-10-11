@@ -1,0 +1,196 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height": 700,
+    "width": "container",
+    "data": {
+      "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/Top%20and%20bottom%205%20countries.csv"
+    },
+    "layer": [
+      
+      {
+        "mark": {"type": "circle", "size": 5000},
+        "params": [
+          {"name": "brush", "select": {"type": "interval", "encodings": ["y"]}}
+        ],
+        "encoding": {
+          "y": {
+            "field": "Country",
+            "type": "nominal",
+            "title": null,
+            "sort": {"encoding": "x", "order":"ascending"}
+          },
+          "x": {
+            "field": "Happiness_score",
+            "type": "quantitative",
+            "title": "Happiness score",
+            "scale": {"domain":[0,8.5]}
+          },
+          "color": {
+            "field": "Region",
+            "title": "Region",
+            "scale": {
+              "scheme": "category10",
+              "range": [
+                "#9568bd",
+                "#e377c2",
+                "#bcbd22",
+                "#17becf"
+              ]
+            }
+          },
+          "opacity": {"condition": {"param": "brush", "value": 1}, "value": 0.3},
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "Region", "type": "nominal"},
+            {
+              "field": "Happiness_score",
+              "type": "quantitative",
+              "title": "Happiness score"
+            }
+          ]
+        }
+        
+      },
+      {
+  
+        "mark": {"type": "bar", "size": 5},
+        "encoding": {
+          "y": {
+            "field": "Country",
+            "type": "nominal",
+            "sort": "-x",
+            "title": null
+          },
+          "x": {
+            "field": "Happiness_score",
+            "type": "quantitative",
+            "title": "Happiness score"
+          },
+          "color": {
+            "field": "Region",
+            "title": "Region",
+            "scale": {
+              "scheme": "category10",
+              "range": [
+                "#9568bd",
+                "#e377c2",
+                "#bcbd22",
+                "#17becf"
+              ]
+            }
+          },
+          "opacity": {"condition": {"param": "brush", "value": 1}, "value": 0.3},
+          "tooltip": [
+            {"field": "Country", "type": "nominal"},
+            {"field": "Region", "type": "nominal"},
+            {
+              "field": "Happiness_score",
+              "type": "quantitative",
+              "title": "Happiness score"
+            }
+          ]
+        }
+      },
+      {
+        "transform": [{"filter": {"param": "brush"}}],
+        "mark": "rule",
+        "encoding": {
+          "x": {
+            "aggregate": "mean",
+            "field": "Happiness_score",
+            "type": "quantitative"
+          },
+          "color": {"value": "green"},
+          "size": {"value": 3}
+        }
+      },
+      {
+        "transform": [
+          {"filter": {"param": "brush"}},
+          {
+            "joinaggregate": [
+              {
+                "op": "mean",
+                "field": "Happiness_score",
+                "as": "Average Happiness score"
+              }
+            ]
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "fontWeight": "bold",
+          "dx": 420,
+          "dy": -380,
+          "fontSize": 22
+        },
+        "encoding": {
+          "text": {"field": "Average Happiness score", "format": ".2f"},
+          "color": {"value": "black"}
+        }
+      },
+      {
+        "transform": [
+          {"filter": "datum.Country == 'Afghanistan'"},
+          {
+            "calculate": "'Average happiness score of selected range: '",
+            "as": "text_annotation"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "fontWeight": "normal",
+          "dx": 200,
+          "dy": -380,
+          "fontSize": 18
+        },
+        "encoding": {
+          "text": {"field": "text_annotation"},
+          "color": {"value": "black"}
+        }
+      },
+      {
+        "transform": [
+          {"filter": "datum.Country == 'Afghanistan'"},
+          {
+            "calculate": "'All the happiest countries are lb located in Western Europe'",
+            "as": "text_annotation"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "fontWeight": "bold",
+          "dx": 230,
+          "dy": 20,
+          "fontSize": 17
+        },
+        "encoding": {
+          "text": {"field": "text_annotation"},
+          "color": {"value": "#17becf"}
+        }
+      }
+    ],
+    "config": {
+      "axis": {
+        "labelFont": "Noto Sans, sans-serif",
+        "labelColor": "black",
+        "titleColor": "black",
+        "gridColor": "lighter",
+        "labelFontSize": 14,
+        "labelLimit": 500
+      },
+      "lineBreak": "lb",
+      "title": {
+        "fontSize": 15
+      },
+      "padding": {"left": 5, "top": 5, "right": 5, "bottom": 5},
+      "style": {
+        "guide-title": {"font": "Noto Sans, sans-serif", "fontSize": 15},
+        "text": {
+          "font": "Noto Sans, sans-serif",
+          "fontWeight": "normal",
+          "size": 14
+        }
+      }
+    }
+  }
