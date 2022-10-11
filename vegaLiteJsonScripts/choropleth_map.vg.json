@@ -102,7 +102,7 @@
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
       "transform": [
         {
-          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "calculate": "'No data on ' + datum.properties.NAME",
           "as": "note"
         }
       ],      
