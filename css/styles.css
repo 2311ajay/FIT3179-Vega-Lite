@@ -40,6 +40,10 @@
   padding: 10px;
 }
 
+.hints{
+  color: #5d5d5d;;
+}
+
 .headerTint{
   /* filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg); */
   background-color: rgb(210, 193, 13);
