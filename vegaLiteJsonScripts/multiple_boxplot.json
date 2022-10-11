@@ -14,10 +14,15 @@
         }
   ],
   "width": "container",
-  "height": 500,
+  "height": 700,
   "layer": [
     {
-      "mark": {"type": "boxplot"},
+      "mark": {"type": "boxplot","extent":1.4,"ticks":true, "size": 30,
+              "box":{
+                  "cornerRadius":10, 
+                  "blend":"darken"
+                }
+              },
       "encoding": {
         "y": {
           "field": "Regional indicator",
@@ -36,16 +41,7 @@
           "type": "nominal",
           "legend": null,
           "scale": {"scheme": "category10"}
-        },
-        "tooltip": [
-          {"field": "Country", "type": "nominal"},
-          {"field": "Regional indicator", "type": "nominal", "title": "Region"},
-          {
-            "field": "Ladder score",
-            "type": "quantitative",
-            "title": "Happiness score"
-          }
-        ]
+        }
       }
     },
     {
@@ -58,7 +54,7 @@
         },
         "color": {"value": "firebrick"},
         "size": {"value": 3},
-        "tooltip": [{"field": "Ladder score", "aggregate":"mean", "title": "Average Happiness score","format":".2f"}]
+        "tooltip": [{"field": "Ladder score", "aggregate":"mean", "title": "Global Average Happiness score","format":".2f"}]
       }
     },
     {
@@ -69,7 +65,7 @@
           "as": "text_annotation"
         }
       ],
-      "mark": {"type": "text", "fontWeight": "bold", "dx": 300, "dy": -195},
+      "mark": {"type": "text", "fontWeight": "bold", "dx": 300, "dy": -285},
       "encoding": {
         "text": {"field": "text_annotation"},
         "color": {"value": "#1f77b4"}
@@ -83,7 +79,7 @@
           "as": "text_annotation"
         }
       ],
-      "mark": {"type": "text", "fontWeight": "bold", "dx": 300, "dy": 200},
+      "mark": {"type": "text", "fontWeight": "bold", "dx": 300, "dy": 280},
       "encoding": {
         "text": {"field": "text_annotation"},
         "color": {"value": "#17becf"}
@@ -97,7 +93,7 @@
           "as": "text_annotation"
         }
       ],
-      "mark": {"type": "text", "fontWeight": "bold", "dx": -250, "dy": -60},
+      "mark": {"type": "text", "fontWeight": "bold", "dx": -300, "dy": -70},
       "encoding": {
         "text": {"field": "text_annotation"},
         "color": {"value": "#9467bd"}
@@ -107,14 +103,14 @@
       "transform": [
         {"filter": "datum.Country == 'Haiti'"},
         {
-          "calculate": "'South Asia is the overall unhappiest region'",
+          "calculate": "'Sub-saharan Africa is on average the unhappiest region'",
           "as": "text_annotation"
         }
       ],
-      "mark": {"type": "text", "fontWeight": "bold", "dx": -200, "dy": 50},
+      "mark": {"type": "text", "fontWeight": "bold", "dx": -200, "dy": 210},
       "encoding": {
         "text": {"field": "text_annotation"},
-        "color": {"value": "#e377c2"}
+        "color": {"value": "#8b8b20"}
       }
     },
     {
