@@ -4,100 +4,59 @@
     "text": "Relative ranking of the 5 happiest countries in the world",
     "frame": "bounds"
   },
-  "width":"container",
-  "height":500,
+  "width": "container",
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/world-happiness-report-compiled-top5.csv"
-  },
-  "layer":[{
-    "transform": [
-        {"filter": "datum.year > 2007"},
-        {
-      "sort": [
-        {"field": "Life Ladder", "order": "descending"}
-      ],
-      "window": [{
-        "op": "rank",
-        "as": "rank"
-      }],
-      "groupby": ["year"]
-    }],
-    
-    "mark": {
-            "type": "line",           
-            "point": {
-                    "size": 300
-                }
-            },
-    "encoding": {
-      "x": {"field": "year", "type": "ordinal"},
-      "y": {"field": "rank", "type": "ordinal", 
-      "scale":{
-            "domain":[1,2,3,4,5]
-        },
-      "axis":{
-        "values":[1,2,3,4,5]
-      }
-      },
-      "color": {
-        "field": "Country", "type": "nominal","legend":{}
-      },
-    "tooltip": [
-                {
-                    "field": "year",
-                    "type": "ordinal",
-                    "title": "Year"
-                },
-                {
-                    "field": "Country",
-                    "type": "nominal",
-                    "title": "Country"
-                },
-                {
-                    "field": "Life Ladder",
-                    "title": "Happiness score"
-                }
-            ]
-    }
-  },
-    {
-        "transform": [
+  }, 
+  "transform": [
             {"filter": "datum.year > 2007"},
-            {
-        "sort": [
-            {"field": "Life Ladder", "order": "descending"}
-        ],
-        "window": [{
-            "op": "rank",
-            "as": "rank"
-        }],
-        "groupby": ["year"]
-        }],
-        
-        "mark": {"type": "image", "width": 50, "height": 50},
-        "encoding": {
+        {
+          "sort": [{"field": "Life Ladder", "order": "descending"}],
+          "window": [{"op": "rank", "as": "rank"}],
+          "groupby": ["year"]
+        },
+        {"filter": "datum.rank <= Top_N"}
+
+  ],   
+  "params": [
+      {
+        "name": "Top_N",
+        "value": 5,
+        "bind": {"input": "range", "min": 3, "max": 10, "step": 1,"name": "Total countries:"}
+      }
+    ],
+  "layer": [
+    {
+      "transform": [],
+      "mark": {"type": "line", "point": {"size": 300}},
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {
+          "field": "rank",
+          "type": "ordinal"
+        },
+        "color": {"field": "Country", "type": "nominal", "legend": false},
+        "tooltip": [
+          {"field": "year", "type": "ordinal", "title": "Year"},
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "Life Ladder", "title": "Happiness score"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "image", "width": 30, "height": 30},
+      "encoding": {
         "x": {"field": "year", "type": "ordinal"},
         "y": {"field": "rank", "type": "ordinal"},
         "url": {"field": "imageUrl", "type": "nominal"},
-        "href":{"field": "wikiUrl"},
+        "href": {"field": "wikiUrl"},
         "tooltip": [
-                    {
-                        "field": "year",
-                        "type": "ordinal",
-                        "title": "Year"
-                    },
-                    {
-                        "field": "Country",
-                        "type": "nominal",
-                        "title": "Country"
-                    },
-                    {
-                        "field": "Life Ladder",
-                        "title": "Happiness score"
-                    }
-                ]
-        }
+          {"field": "year", "type": "ordinal", "title": "Year"},
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "Life Ladder", "title": "Happiness score"}
+        ]
+      }
     }
   ]
-  
 }
