@@ -184,11 +184,12 @@
           ],
           "layer": [
             {
-              "mark": {"type": "text", "strokeWidth": 35, "color": "black"},
+              "mark": {"type": "text", "strokeWidth": 65, "color": "black", "fontWeight":"bold"},
               "encoding": {
-                "text": {"field": "text_annotation"},
+                "text": {"field": "text_annotation" },
                 "size": {"value": 20}
               }
+              
             }
           ]
         }
