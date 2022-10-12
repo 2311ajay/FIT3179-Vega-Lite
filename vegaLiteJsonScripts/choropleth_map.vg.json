@@ -206,6 +206,21 @@
         "center": {"expr": "center_to"},
         "scale": {"expr": "zoom_level"}
       }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/vegaLiteJsonScripts/ne_110m_admin_0_boundary_lines_land.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_boundary_lines_land"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "gray"
+      }
     }
+
   ]
 }
