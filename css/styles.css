@@ -118,7 +118,7 @@ body {
   font-size: 4em;
 }
 
-.container {
+.card {
   border: 1px solid;
   box-shadow: 5px 10px #8ea5e0;
   overflow: hidden;
@@ -137,31 +137,31 @@ select {
   2px 2px 1px rgb(255, 255, 255); 
 }
 
-#container .content .top,
-#container .content .bottom {
+#card .content .top,
+#card .content .bottom {
 	position: absolute;
 }
 
-#container .content .top {
+#card .content .top {
 	top: 0;
 }
 
-#container .content .bottom {
+#card .content .bottom {
 	bottom: 0;
 }
 
-#container .content .left,
-#container .content .center,
-#container .content .right { 
+#card .content .left,
+#card .content .center,
+#card .content .right { 
 	position: relative;
 	width: 50%;
 }
 
-#container .content .left {
+#card .content .left {
 	float: left;
 }
 
-#container .content .center {
+#card .content .center {
 	float: left;
 	padding-left: 19px;
 }
