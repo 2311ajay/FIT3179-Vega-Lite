@@ -77,7 +77,7 @@
     }
   ],
   "projection": {
-    "type": "equirectangular",
+    "type": "equalEarth",
     "center": {"expr": "center_to"},
     "scale": {"expr": "zoom_level"}
   },
@@ -89,7 +89,7 @@
       },
       "mark": {"type": "geoshape"}, 
       "projection":{
-          "type": "equirectangular",
+          "type": "equalEarth",
           "center": {"expr": "center_to"},
           "scale": {"expr": "zoom_level"}
         }
@@ -107,7 +107,7 @@
         }
       ],      
       "projection":{
-        "type": "equirectangular",
+        "type": "equalEarth",
         "center": {"expr": "center_to"},
         "scale": {"expr": "zoom_level"}
       },
@@ -200,9 +200,9 @@
         "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/vegaLiteJsonScripts/ne_110m_graticules_30.topojson",
         "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
       },
-      "mark": {"type": "geoshape", "stroke":"aliceblue", "strokeWidth": 0.8},
+      "mark": {"type": "geoshape", "stroke":"aliceblue", "strokeWidth": 0.8, "fill":null},
       "projection":{
-        "type": "equirectangular",
+        "type": "equalEarth",
         "center": {"expr": "center_to"},
         "scale": {"expr": "zoom_level"}
       }
