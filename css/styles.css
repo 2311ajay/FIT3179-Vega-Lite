@@ -84,6 +84,7 @@
 .factor-icon {
   width: 120px;
   filter: grayscale(100%);
+  
 }
 
 .factor-icon:hover {
@@ -137,31 +138,71 @@ select {
   2px 2px 1px rgb(255, 255, 255); 
 }
 
-#card .content .top,
-#card .content .bottom {
-	position: absolute;
+
+body{
+  font-family: 'Nunito', sans-serif;
 }
 
-#card .content .top {
-	top: 0;
+.a{color: #E7484F}
+.b{color: #F68B1D}
+.c{color: #FCED00}
+.d{color: #009E4F}
+.e{color: #00AAC3}
+.f{color:  #732982}
+
+
+.container{
+  margin-top: 150px;
 }
 
-#card .content .bottom {
-	bottom: 0;
+.text-center {
+  text-align: center;
 }
 
-#card .content .left,
-#card .content .center,
-#card .content .right { 
-	position: relative;
-	width: 50%;
+.rainbow{
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer; 
 }
 
-#card .content .left {
-	float: left;
+
+.rainbow-5:hover{
+  filter: grayscale(0%) !important;
+   background-image:     linear-gradient(
+      to right, 
+      #E7484F,
+      #E7484F 16.65%,
+      #F68B1D 16.65%,
+      #F68B1D 33.3%,
+      #FCED00 33.3%,
+      #FCED00 49.95%,
+      #009E4F 49.95%,
+      #009E4F 66.6%,
+      #00AAC3 66.6%,
+      #00AAC3 83.25%,
+      #732982 83.25%,
+      #732982 100%,
+      #E7484F 100%
+     
+     
+     
+    );
+  animation:slidebg 5s linear infinite;
 }
 
-#card .content .center {
-	float: left;
-	padding-left: 19px;
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+.follow{
+  margin-top: 40px;
+}
+
+.follow a{
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
 }
