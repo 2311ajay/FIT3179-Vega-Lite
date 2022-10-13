@@ -81,6 +81,14 @@
   color: #16a0af;
 }
 
+.happy {
+  color: #078707;
+}
+
+.sad {
+  color: #e81010;
+}
+
 .factor-icon {
   width: 120px;
   filter: grayscale(100%);
