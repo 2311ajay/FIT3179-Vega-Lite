@@ -4,27 +4,7 @@
     "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/world-happiness-report-with-regions-clean.csv"
   },
   "params": [
-            {
-            "name": "interpolate",
-            "value": "cardinal",
-            "bind": {
-              "name": "Display mode: ",
-              "input": "select",
-              "options": [
-                "cardinal",
-                "linear"
-              ],
-              "labels": [
-                "Normalised",
-                "Linear"
-              ]
-            }
-          },
-          {
-            "name": "tension",
-            "value": 0,
-            "bind": {"input": "range", "min": 0, "max": 1, "step": 0.05, "name": "Normalisation degree:"}
-          }],
+],
   "hconcat": [
     {
       "vconcat": [
@@ -51,9 +31,7 @@
           ],
           "mark": {
                 "type": "area",
-                "line": true,
-                "interpolate": {"expr": "interpolate"},
-                "tension": {"expr": "tension"}
+                "line": true
           },
           "encoding": {
             "x": {"field": "year", "type": "nominal", "title": "Year"},
