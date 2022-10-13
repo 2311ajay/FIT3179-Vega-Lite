@@ -41,7 +41,7 @@
           "title":"Region"
         },
         "opacity": {
-      "condition": {"param": "region", "value": 1},
+      "condition": {"param": "region", "value": 0.7},
       "value": 0.1
     }
     ,
