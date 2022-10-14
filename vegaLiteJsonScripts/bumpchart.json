@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Relative ranking of the 5 happiest countries in the world",
+    "text": "Relative ranking of the happiest countries in the world",
     "frame": "bounds"
   },
   "width": "container",
