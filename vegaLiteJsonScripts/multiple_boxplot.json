@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A horizontal box plot showing median, min, and max",
+  "description": "",
   "data": {
     "url": "https://raw.githubusercontent.com/2311ajay/FIT3179-Vega-Lite/main/data/world-happiness-report-2021-raw.csv"
   },
