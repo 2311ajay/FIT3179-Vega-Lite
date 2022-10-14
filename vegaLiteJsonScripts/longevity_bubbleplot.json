@@ -30,7 +30,7 @@
           "title": "Happiness score"
         },
         "size":{
-          "field":"Density","type":"quantitative","title":"Density per sq km"
+          "field":"Density","type":"quantitative","title":"Density per square km"
         },
         "color": {
           "scale": {"scheme": "category10"},
@@ -50,7 +50,7 @@
             "title": "Region"
           },
           {"field": "Healthy life expectancy", "type": "quantitative", "title":"Healthy life expectancy"},
-          {"field":"Density","type":"quantitative","title":"Density (per sq km)"}
+          {"field":"Density","type":"quantitative","title":"Density (per square km)"}
         ]
       }
     },
