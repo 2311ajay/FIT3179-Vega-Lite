@@ -89,7 +89,7 @@
       "transform": [
         {"filter": "datum.Country == 'Haiti'"},
         {
-          "calculate": "'The Middle East and North Africa has the lb widest range of percieved happiness'",
+          "calculate": "'The Middle East and North Africa has the lb widest range of perceived happiness'",
           "as": "text_annotation"
         }
       ],
